@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  background: linear-gradient(to bottom, #e6f0fa, #d0e8f7);
+}
+
+.weather {
+  place-self: center;
+  padding: 40px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1142d4, #bcefd3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
+}
+
+.loading {
+  padding-top: 8px;
+  font-size: 20px;
+  color: white;
+}
+
+.weather-content {
+  opacity: 1;
+  transform: translateY(40px);
+  transition: opacity 2s, transform 0.7s;
+  pointer-events: none;
+}
+
+.weather-content.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s, transform 0.7s;
+  pointer-events: auto;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-bar input {
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding-left: 25px;
+  color: #626262;
+  background: #ebfffc;
+  font-size: 18px;
+}
+
+.search-bar img {
+  width: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  background: #ebfffc;
+  cursor: pointer;
+}
+
+.weather-info {
+  justify-content: center;
+  text-align: center;
+}
+
+.weather-icon {
+  width: 150px;
+  margin: 16px 0;
+}
+
+.temperature {
+  color: #fff;
+  font-size: 80px;
+  line-height: 1;
+  padding-bottom: 8px;
+}
+.location {
+  font-size: 32px;
+  color: #fff;
+}
+
+.weather-data {
+  width: 100%;
+  padding-top: 32px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.weather-data .col {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 22px;
+}
+
+.weather-data .col span {
+  display: block;
+  font-size: 16px;
+}
+
+.weather-data .col img {
+  width: 26px;
+  margin-top: 10px;
+}
